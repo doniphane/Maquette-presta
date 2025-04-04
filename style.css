@@ -15,6 +15,7 @@ body {
 
 h1 {
   font-size: 5em;
+  animation: pulse 2.5s infinite;
 }
 nav {
   display: flex;
@@ -44,6 +45,12 @@ nav {
   font-size: 1rem;
   padding: 15px;
   display: block;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+  transition: 2s ease-in-out;
+  cursor: pointer;
 }
 
 .container {
@@ -118,6 +125,12 @@ nav {
   font-weight: bold;
 }
 
+.footer .links button:hover {
+  background-color: black;
+  color: white;
+  animation: ease-in-out 2s;
+  cursor: pointer;
+}
 .partners h3 {
   padding: 10px;
 }
@@ -126,4 +139,20 @@ nav {
   margin: 0 5px;
   border: 1px solid white;
   border-radius: 40px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
